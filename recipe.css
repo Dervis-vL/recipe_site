@@ -1,0 +1,160 @@
+/* the asterix will be applied on all markups, asigned globally */
+* {
+    overflow: auto; /* take overflow into account and adapt; float objects can create overflow */
+}
+
+body {
+    background-color: #8BA1BB;
+    font-family: Arial;
+    margin: 0;   /* default is not 0 */
+}
+
+div.content {
+    background-color: white;
+    /* margins are outside margins and padding is inside margins */
+    margin: 60% 10% 80px 10%;  /* top, left, bottom, right*/
+    padding: 0 30px 30px 30px;
+    min-width: 350px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 8px 8px rgba(0,0,0,0.1);
+    overflow: visible;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+p.description {
+    max-width: 400px;    /* text sentece reach width */
+    display: inline-block;
+    font-size: 14px;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+div.category {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    overflow: visible;
+}
+
+p.category {
+    background-color: black;
+    color: white;    /* text color */
+    display: inline-block;
+    margin-top: -15px;
+    margin-bottom: 0px;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+div.separator {
+    height: 1px;
+    width: 100px;
+    background: black;
+    margin-left: auto;  /* the auto input will give it the most margin */
+    margin-right: auto; /* do that twice and you'll have a balance in the center */
+}
+
+div.info {
+    position: relative;
+}
+
+table.info {
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    color: white; 
+    background-color: #6C8290C0; 
+    height: 80px
+}
+
+/* Change all the td of the table */
+table.info td {
+    text-align: center;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+/* Change all the th of the table */
+table.info th {
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 8px;
+    font-size: 16px;
+}
+
+img.info {
+    display: block;
+    max-height: 400px;
+    min-height: 200px;  /* to make sure you don't get too much shift and overlap when image is loading */
+    object-fit: cover;  /*  makes sure resizing keeps the objec ratio */
+    background-color: lightgray;
+
+}
+
+div.col {
+    width: 45%;
+    margin-top: 20px;
+}
+
+div.col h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-bottom: 5px solid #6c8290;    /* width, type, color */
+    padding-bottom: 5px;
+}
+
+div.col1 {
+    display: inline-block;
+    margin-right: 10%;
+}
+
+div.col2 {
+    /* div (and other tags) will not adapt when asigning float */
+    float: right;   /* size of this column will not be taken into account of other elements */
+}
+
+div.ingredients p {
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid lightgray;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    padding: 8px 0;     /* vertical, horizontal */
+}
+
+table.instructions p.number {
+    background-color: #6c8290;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding-top: 4px;
+    margin: 0;
+    box-sizing: border-box; /* height and width are fixed, padding will not influence this */
+    border-radius: 50%;
+}
+
+table.instructions td.instruction_step {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+table.instructions td {
+    vertical-align: top;
+}
+
+table.instructions tr {
+    height: 40px;   /* will behave like a minimal height in tables */
+}
